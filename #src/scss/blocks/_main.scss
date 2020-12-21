@@ -15,7 +15,7 @@
         top: -35px;
         width: 58px;
         height: 58px;
-        animation: rotation  3s linear infinite;
+        animation: rotation  4s linear infinite;
       }
     }
     &:nth-child(2) {
@@ -24,8 +24,7 @@
   }
 
   &__text {
-    display: flex;
-    justify-content: flex-end;
+    padding-left: 560px;
     margin-top: 80px;
     font-size: 20px;
     p {

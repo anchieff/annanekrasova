@@ -1,0 +1,32 @@
+.choose {
+  padding-top: 140px;
+
+  &__title {
+    &:nth-child(2) {
+      padding-left: 80px;
+    }
+    &:last-child {
+      padding-left: 30px;
+    }
+  }
+
+  &__content {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    p {
+      display: block;
+      width: 488px;
+      span {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    width: 560px;
+  }
+}
+

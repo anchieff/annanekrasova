@@ -46,7 +46,7 @@ h3 {
 }
 
 .container {
-  max-width: 950px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -173,8 +173,8 @@ h3 {
   top: -35px;
   width: 58px;
   height: 58px;
-  -webkit-animation: rotation  3s linear infinite;
-          animation: rotation  3s linear infinite;
+  -webkit-animation: rotation  4s linear infinite;
+          animation: rotation  4s linear infinite;
 }
 
 .main__title:nth-child(2) {
@@ -182,12 +182,7 @@ h3 {
 }
 
 .main__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  padding-left: 560px;
   margin-top: 80px;
   font-size: 20px;
 }
@@ -227,24 +222,13 @@ h3 {
 .title_left-circle::before {
   content: '';
   position: absolute;
-  left: 85px;
+  left: 240px;
   top: -35px;
   width: 200px;
   height: 200px;
   z-index: -2;
   -webkit-animation: rotation  8s linear infinite;
           animation: rotation  8s linear infinite;
-}
-
-.title_left-circle::after {
-  content: "";
-  position: absolute;
-  top: 36px;
-  left: 230px;
-  width: 61px;
-  height: 60px;
-  background-color: #D9DBDF;
-  z-index: -1;
 }
 
 .title_fz48 {
@@ -267,7 +251,7 @@ h3 {
 .portfolio__project {
   padding-top: 130px;
   display: grid;
-  grid-template-columns: 460px 490px;
+  grid-template-columns: 560px 490px;
   grid-template-rows: 390px 90px;
 }
 
@@ -333,7 +317,7 @@ h3 {
 .portfolio__else {
   margin-top: 120px;
   display: grid;
-  grid-template-columns: 460px 490px;
+  grid-template-columns: 560px 490px;
 }
 
 .portfolio__tilda,
@@ -352,7 +336,6 @@ h3 {
 }
 
 .portfolio__tilda {
-  width: 460px;
   background-color: #3E3E3E;
   color: #D9DBDF;
 }
@@ -418,4 +401,45 @@ h3 {
   position: absolute;
   top: 30px;
   left: 30px;
+}
+
+.choose {
+  padding-top: 140px;
+}
+
+.choose__title:nth-child(2) {
+  padding-left: 80px;
+}
+
+.choose__title:last-child {
+  padding-left: 30px;
+}
+
+.choose__content {
+  margin-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.choose__content p {
+  display: block;
+  width: 488px;
+}
+
+.choose__content p span {
+  color: #B12B00;
+}
+
+.choose__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 560px;
 }

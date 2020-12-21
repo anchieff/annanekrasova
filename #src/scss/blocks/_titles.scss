@@ -19,23 +19,23 @@
     &::before {
       content: '';
       position: absolute;
-      left: 85px;
+      left: 240px;
       top: -35px;
       width: 200px;
       height: 200px;
       z-index: -2;
       animation: rotation  8s linear infinite;
     }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 36px;
-      left: 230px;
-      width: 61px;
-      height: 60px;
-      background-color: $background;
-      z-index: -1;
-    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 36px;
+    //   left: 230px;
+    //   width: 61px;
+    //   height: 60px;
+    //   background-color: $background;
+    //   z-index: -1;
+    // }
   }
 
   &_fz48 {
