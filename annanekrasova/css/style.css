@@ -258,11 +258,11 @@ h3 {
 .portfolio__content {
   -ms-flex-item-align: center;
       align-self: center;
-  width: 420px;
+  width: 500px;
 }
 
 .portfolio__text {
-  margin-top: 25px;
+  margin-top: 40px;
 }
 
 .portfolio__img {
@@ -286,6 +286,10 @@ h3 {
   transition: all 0.4s;
 }
 
+.portfolio__more:hover {
+  color: #B12B00;
+}
+
 .portfolio__more:before {
   content: '';
   position: absolute;
@@ -299,7 +303,6 @@ h3 {
 }
 
 .portfolio__more:hover {
-  color: #B12B00;
   padding-left: 55px;
   padding-right: 20px;
 }
@@ -442,4 +445,74 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   width: 560px;
+}
+
+.about {
+  padding-top: 140px;
+}
+
+.about__title::before {
+  content: url("../img/titles/about.svg");
+}
+
+.about__info {
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__photo {
+  -webkit-transform: rotate(-2.5deg);
+      -ms-transform: rotate(-2.5deg);
+          transform: rotate(-2.5deg);
+}
+
+.about__content {
+  margin-left: 75px;
+  width: 600px;
+}
+
+.about__text {
+  margin-top: 40px;
+}
+
+.about__text p {
+  margin-bottom: 25px;
+}
+
+.about__text p:last-child {
+  margin-bottom: 70px;
+}
+
+.about__insta,
+.about__github {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  position: relative;
+}
+
+.about__insta:hover,
+.about__github:hover {
+  color: #B12B00;
+}
+
+.about__insta::after,
+.about__github::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #3E3E3E;
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.about__github {
+  margin-left: 90px;
 }

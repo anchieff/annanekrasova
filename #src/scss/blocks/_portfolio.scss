@@ -15,14 +15,14 @@ padding-top: 176px;
 
   &__content {
     align-self: center;
-    width: 420px;
+    width: 500px;
   }
 
   &__project-title {
   }
 
   &__text {
-    margin-top: 25px;
+    margin-top: 40px;
   }
 
   &__img {
@@ -40,7 +40,7 @@ padding-top: 176px;
     padding-right: 40px;
     position: relative;
     z-index: 1;
-    transition: all 0.4s;
+    @include change-color;
     &:before {
       content: '';
       position: absolute;
@@ -53,17 +53,13 @@ padding-top: 176px;
       z-index: -1;
     }
     &:hover {
-      color: $accent-color;
       padding-left: 55px;
       padding-right: 20px;
     }
   }
 
   &__github {
-    transition: all 0.4s;
-    &:hover {
-      color: $accent-color;
-    }
+    @include change-color;
   }
 
   &__else {

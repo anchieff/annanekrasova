@@ -1,0 +1,68 @@
+.about {
+  padding-top: 140px;
+  &__title {
+    &::before {
+      content:url('../img/titles/about.svg');
+    }
+  }
+
+  &__info {
+    margin-top: 150px;
+    display: flex;
+  }
+
+  &__photo {
+    transform: rotate(-2.5deg);
+  }
+
+  &__content {
+    margin-left: 75px;
+    width: 600px;
+  }
+
+  &__text {
+    margin-top: 40px;
+    p {
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 70px;
+      }
+    }
+
+  }
+
+  &__buttons {
+
+  }
+
+  &__insta, &__github {
+    @include change-color;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 125px;
+      height: 40px;
+      border-radius: 50%;
+      border: $border;
+      transform: rotate(40deg);
+    }
+    // &:hover {
+    //   &::after {
+    //     transform: rotate(-40deg);
+    //   }
+      
+    // }
+  }
+
+  &__insta {
+
+  }
+
+  &__github {
+    margin-left: 90px;
+  }
+}
+
