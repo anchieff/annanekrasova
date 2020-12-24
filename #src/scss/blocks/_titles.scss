@@ -12,30 +12,36 @@
     text-align: center;
   }
 
-  &_left-circle {
+  &_left-circle, &__right-circle {
     position: relative;
     z-index: 1;
-    padding-left: 116px;
     &::before {
       content: '';
       position: absolute;
-      left: 240px;
       top: -35px;
       width: 200px;
       height: 200px;
       z-index: -2;
       animation: rotation  8s linear infinite;
     }
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   top: 36px;
-    //   left: 230px;
-    //   width: 61px;
-    //   height: 60px;
-    //   background-color: $background;
-    //   z-index: -1;
-    // }
+  }
+
+  &_left-circle {
+    padding-left: 116px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 240px;
+    }
+  }
+
+  &__right-circle {
+    padding-right: 116px;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 240px;
+    }
   }
 
   &_fz48 {

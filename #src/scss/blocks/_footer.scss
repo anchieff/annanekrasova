@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 140px;
+  padding: 40px 20px;
+  background-color: $text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__copyright {
+    color: $background;
+  }
+
+  &__policy {
+    position: relative;
+    color: $background;
+    padding-bottom: 3px;
+    @include border;
+    &::after {
+      background-color: $background;
+    }
+  }
+}

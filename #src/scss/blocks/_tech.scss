@@ -1,0 +1,38 @@
+.tech {
+  padding-top: 140px;
+  &__title {
+    &:nth-child(2) {
+      padding-left: 80px;
+    }
+    &:last-child {
+      padding-left: 30px;
+    }
+  }
+
+  &__content {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: flex-start;
+    width: 560px;
+  }
+
+  &__text {
+    width: 640px;
+    p {
+      margin-bottom: 25px;
+      display: block;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      span {
+        color: $accent-color;
+      }
+    }
+  }
+}
+

@@ -213,9 +213,25 @@ h3 {
   text-align: center;
 }
 
-.title_left-circle {
+.title_left-circle,
+.title__right-circle {
   position: relative;
   z-index: 1;
+}
+
+.title_left-circle::before,
+.title__right-circle::before {
+  content: '';
+  position: absolute;
+  top: -35px;
+  width: 200px;
+  height: 200px;
+  z-index: -2;
+  -webkit-animation: rotation  8s linear infinite;
+          animation: rotation  8s linear infinite;
+}
+
+.title_left-circle {
   padding-left: 116px;
 }
 
@@ -223,12 +239,16 @@ h3 {
   content: '';
   position: absolute;
   left: 240px;
-  top: -35px;
-  width: 200px;
-  height: 200px;
-  z-index: -2;
-  -webkit-animation: rotation  8s linear infinite;
-          animation: rotation  8s linear infinite;
+}
+
+.title__right-circle {
+  padding-right: 116px;
+}
+
+.title__right-circle::before {
+  content: '';
+  position: absolute;
+  right: 240px;
 }
 
 .title_fz48 {
@@ -453,6 +473,7 @@ h3 {
 
 .about__title::before {
   content: url("../img/titles/about.svg");
+  left: 330px;
 }
 
 .about__info {
@@ -460,6 +481,9 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about__photo {
@@ -491,6 +515,7 @@ h3 {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   position: relative;
+  font-size: 24px;
 }
 
 .about__insta:hover,
@@ -513,6 +538,177 @@ h3 {
           transform: rotate(40deg);
 }
 
+.about__insta::after {
+  top: -5px;
+  left: 0;
+}
+
 .about__github {
   margin-left: 90px;
+}
+
+.about__github::after {
+  top: -5px;
+  left: -20px;
+}
+
+.tech {
+  padding-top: 140px;
+}
+
+.tech__title:nth-child(2) {
+  padding-left: 80px;
+}
+
+.tech__title:last-child {
+  padding-left: 30px;
+}
+
+.tech__content {
+  margin-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tech__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 560px;
+}
+
+.tech__text {
+  width: 640px;
+}
+
+.tech__text p {
+  margin-bottom: 25px;
+  display: block;
+}
+
+.tech__text p:last-child {
+  margin-bottom: 0;
+}
+
+.tech__text p span {
+  color: #B12B00;
+}
+
+.contacts {
+  padding-top: 140px;
+}
+
+.contacts__title::before {
+  content: url("../img/titles/contacts.svg");
+  right: 305px;
+}
+
+.contacts__info {
+  margin-top: 80px;
+  max-width: 500px;
+}
+
+.contacts__links {
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  row-gap: 60px;
+}
+
+.contacts__link {
+  position: relative;
+}
+
+.contacts__link::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50px;
+  width: 280px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #3E3E3E;
+}
+
+.contacts__link:nth-child(1) {
+  justify-self: center;
+}
+
+.contacts__link:nth-child(1)::after {
+  left: 111px;
+}
+
+.contacts__link:nth-child(2) {
+  justify-self: end;
+}
+
+.contacts__link:nth-child(2)::after {
+  left: -88px;
+}
+
+.footer {
+  margin-top: 140px;
+  padding: 40px 20px;
+  background-color: #3E3E3E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__copyright {
+  color: #D9DBDF;
+}
+
+.footer__policy {
+  position: relative;
+  color: #D9DBDF;
+  padding-bottom: 3px;
+}
+
+.footer__policy:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #3E3E3E;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.footer__policy:hover:after {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.footer__policy::after {
+  background-color: #D9DBDF;
 }

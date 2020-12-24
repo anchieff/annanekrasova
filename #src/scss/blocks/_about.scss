@@ -3,12 +3,14 @@
   &__title {
     &::before {
       content:url('../img/titles/about.svg');
+      left: 330px;
     }
   }
 
   &__info {
     margin-top: 150px;
     display: flex;
+    align-items: center;
   }
 
   &__photo {
@@ -38,6 +40,7 @@
   &__insta, &__github {
     @include change-color;
     position: relative;
+    font-size: 24px;
     &::after {
       content: '';
       position: absolute;
@@ -58,11 +61,19 @@
   }
 
   &__insta {
+    &::after {
+      top: -5px;
+      left: 0;
+    }
 
   }
 
   &__github {
     margin-left: 90px;
+    &::after {
+      top: -5px;
+      left: -20px;
+    }
   }
 }
 

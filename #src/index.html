@@ -12,28 +12,28 @@
   <canvas id="noise" class="noise"></canvas>
 
   <header class="header">
-    <a href="#" class="header__logo"><img src="img/icons/logo.svg" alt="nekrasova-logo"></a>
+    <a href="#up" class="header__logo"><img src="img/icons/logo.svg" alt="nekrasova-logo"></a>
     <nav class="header__nav">
       <ul class="header__menu">
-        <li><a href="" class="header__menu-item">работы</a></li>
-        <li><a href="" class="header__menu-item">Обо мне</a></li>
-        <li><a href="" class="header__menu-item">Контакты</a></li>
+        <li><a href="#portfolio" class="header__menu-item">работы</a></li>
+        <li><a href="#about" class="header__menu-item">Обо мне</a></li>
+        <li><a href="#contacts" class="header__menu-item">Контакты</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="main">
+  <section class="main" id="up">
     <div class="container">
       <h1 class="title title_fz96 main__title main__title_star">front end</h1>
       <div class="title title_fz96 main__title">разработка</div>
       <div class="title title_fz96 main__title">и веб-дизайн</div>
       <div class="main__text">
-        <p>Привет! Меня зовут Анна Некрасова.При помощи кода, графических редакторов и чашки кофе рассказываю о вашем бизнесе миру. Здесь вы можете <a href='#'>посмотреть</a> мои работы или <a href='#'>связаться</a> со мной для дальнейшего сотрудничества.</p>
+        <p>Привет! Меня зовут Анна Некрасова.При помощи кода, графических редакторов и чашки кофе рассказываю о вашем бизнесе миру. Здесь вы можете <a href='#portfolio'>посмотреть</a> мои работы или <a href='#contacts'>связаться</a> со мной для дальнейшего сотрудничества.</p>
       </div>
     </div>
   </section>
 
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <div class="container">
       <h2 class="title title_fz85 title_left-circle portfolio__title">мои работы</h2>
 
@@ -43,10 +43,13 @@
           <div class="portfolio__text">Студия йоги в Самаре. Редизайн лендинга, адаптивная верстка.</div>
         </div>
         <div class="portfolio__links">
-          <a href="#" class="portfolio__more">Смотреть проект</a>
-          <a href="#" class="portfolio__github">На GitHub</a>
+          <a href="https://ravnovesie.annanekrasova.ru" class="portfolio__more" target="_blank">Смотреть проект</a>
+          <a href="https://github.com/anchieff/ravnovesie" class="portfolio__github" target="_blank">На GitHub</a>
         </div>
-        <img src="img/portfolio/ravnovesie.jpg" alt="yoga-studio" class="portfolio__img">
+        <a href="https://ravnovesie.annanekrasova.ru" class="portfolio__img" target="_blank">
+          <img src="img/portfolio/ravnovesie.jpg" alt="yoga-studio">
+        </a>
+        
       </div>
 
       <div class="portfolio__project">
@@ -55,10 +58,12 @@
           <div class="portfolio__text">Умная доставка материалов для строительных площадок. Адаптивная верстка макета.</div>
         </div>
         <div class="portfolio__links">
-          <a href="#" class="portfolio__more">Смотреть проект</a>
-          <a href="#" class="portfolio__github">На GitHub</a>
+          <a href="https://stroycontrol.annanekrasova.ru" class="portfolio__more " target="_blank">Смотреть проект</a>
+          <a href="https://github.com/anchieff/stroycontrol" class="portfolio__github" target="_blank">На GitHub</a>
         </div>
-        <img src="img/portfolio/stroycontrol.jpg" alt="stroycontrol" class="portfolio__img">
+        <a href="https://stroycontrol.annanekrasova.ru" target="_blank"  class="portfolio__img">
+          <img src="img/portfolio/stroycontrol.jpg" alt="stroycontrol">
+        </a>    
       </div>
 
       <div class="portfolio__project">
@@ -67,10 +72,11 @@
           <div class="portfolio__text">Интернет-магазин флористической мастерской. Разработка дизайна и верстка на Tilda</div>
         </div>
         <div class="portfolio__links">
-          <a href="#" class="portfolio__more">Смотреть проект</a>
-          <a href="#" class="portfolio__github">На GitHub</a>
+          <a href="https://gusflowers.online/" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
-        <img src="img/portfolio/gusflowers.jpg" alt="gusflowers" class="portfolio__img">
+        <a href="https://gusflowers.online/" target="_blank" class="portfolio__img">
+          <img src="img/portfolio/gusflowers.jpg" alt="gusflowers">
+        </a>
       </div>
 
       <div class="portfolio__project">
@@ -79,10 +85,11 @@
           <div class="portfolio__text">Интернет-магазин товаров для розжига. Разработка дизайна и верстка на Tilda</div>
         </div>
         <div class="portfolio__links">
-          <a href="#" class="portfolio__more">Смотреть проект</a>
-          <a href="#" class="portfolio__github">На GitHub</a>
+          <a href="https://mr-fuoco.ru/" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
-        <img src="img/portfolio/fuoco.jpg" alt="mr.fuoco" class="portfolio__img">
+        <a href="https://mr-fuoco.ru/" target="_blank" class="portfolio__img">
+          <img src="img/portfolio/fuoco.jpg" alt="mr.fuoco">
+        </a>
       </div>
 
       <div class="portfolio__project">
@@ -91,20 +98,21 @@
           <div class="portfolio__text">Интернет-магазин флористической мастерской. Разработка дизайна и верстка на Tilda</div>
         </div>
         <div class="portfolio__links">
-          <a href="#" class="portfolio__more">Смотреть проект</a>
-          <a href="#" class="portfolio__github">На GitHub</a>
+          <a href="https://j-buket.ru/" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
-        <img src="img/portfolio/jack.jpg" alt="jackbouqet" class="portfolio__img">
+        <a href="https://j-buket.ru/" target="_blank" class="portfolio__img">
+          <img src="img/portfolio/jack.jpg" alt="jackbouqet">
+        </a>
       </div>
 
       <div class="portfolio__else">
         <div class="portfolio__tilda">
           <div class="portfolio__subtitle">Проекты на Тильде</div>
-          <a href="#" class="portfolio__link portfolio__tilda-link">Веб-дизайн</a>
+          <a href="/portfolio.html" class="portfolio__link portfolio__tilda-link">Веб-дизайн</a>
         </div>
         <div class="portfolio__posters">
           <div class="portfolio__subtitle">Отдыхаю от сайтов</div>
-          <a href="#" class="portfolio__link portfolio__posters-link">а еще постеры</a>
+          <a href="/posters.html" class="portfolio__link portfolio__posters-link">а еще постеры</a>
         </div>
       </div>
       
@@ -133,7 +141,7 @@
     </div>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="container">
       <h2 class="title title_fz85 title_left-circle about__title">обо мне</h2>
       <div class="about__info">
@@ -149,13 +157,56 @@
             <p>Люблю работать с кодом, в свободное время изучаю верстку и JavaScript. Это помогает находить нестандартные решения для ваших сайтов.</p>         
             </div>
           <div class="about__buttons">
-            <a href="" class="about__insta">Instagram</a>
-            <a href="" class="about__github">GitHub</a>
+            <a href="https://www.instagram.com/anna_webdev" target="_blank" class="about__insta">Instagram</a>
+            <a href="https://github.com/anchieff" target="_blank" class="about__github">GitHub</a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="tech">
+    <div class="container">
+      
+        <h3 class="tech__title title title_fz48 title_orange">стек технологий,</h3>
+        <h3 class="tech__title title title_fz48 title_orange">который я использую</h3>
+        <h3 class="tech__title title title_fz48 title_orange">в своей работе</h3>
+     
+      <div class="tech__content">
+        <div class="tech__img">
+          <svg width="341" height="341" viewBox="0 0 341 341" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M161.133 54.5996L173.881 127.205L223.859 73.0176L195.329 140.99L266.67 122.424L205.921 164.181L275.973 187.132L202.292 189.418L248.816 246.599L185.596 208.686L193.82 281.942L161.133 215.869L128.446 281.942L136.67 208.686L73.4501 246.599L119.974 189.418L46.2927 187.132L116.345 164.181L55.5964 122.424L126.937 140.99L98.4072 73.0176L148.385 127.205L161.133 54.5996Z" fill="#B12B00"/>
+            <path d="M188.414 107.093L188.588 108.089L189.274 107.346L260.573 30.0411L219.872 127.01L219.481 127.942L220.459 127.688L322.234 101.202L235.569 160.773L234.736 161.346L235.696 161.661L335.634 194.403L230.52 197.663L229.51 197.694L230.148 198.478L296.519 280.053L206.329 225.967L205.462 225.447L205.575 226.451L217.307 330.959L170.676 236.699L170.227 235.793L169.779 236.699L123.148 330.959L134.88 226.451L134.993 225.447L134.126 225.967L43.9359 280.053L110.307 198.478L110.945 197.694L109.935 197.663L4.82072 194.403L104.758 161.661L105.719 161.346L104.886 160.773L18.221 101.202L119.996 127.688L120.974 127.942L120.583 127.01L79.8822 30.0411L151.181 107.346L151.866 108.089L152.041 107.093L170.227 3.51336L188.414 107.093Z" stroke="#3E3E3E"/>
+            </svg>
+        </div>
+        <div class="tech__text">
+          <p>Верстаю на <span>HTML/CSS(SCSS)</span> — адаптивно, кроссбраузерно, с использованием семантических тегов и BEM. Все, как вы любите)</p>
+          <p>Пишу код. Табы, попапы, калькуляторы - на <span>JavaScript(ES6 и выше)</span>. Для чего-то более серьезного и интересного использую <span>React</span>.</p>
+          <p>Собираю 150 миллионнов разрозненных (но хорошо структурированных) файлов в один готовый проект с помощью <span>Gulp</span> и <span>Webpack</span>. </p>
+          <p>При острой необходимости могу работать с <span>Bootstrap</span> и <span>JQuery</span>.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" id="contacts">
+    <div class="container">
+      <h2 class="title title_fz85 title__right-circle contacts__title">Контакты</h2>
+      <div class="contacts__info">Я всегда открыта для новых интересных проектов. Свяжитесь со мной любым удобным для вас способом. Давайте поработаем вместе) </div>
+      <div class="contacts__links">
+        <a href="https://t.me/webnekrasova" target="_blank" class="contacts__link title title_fz48 title_orange">Telegram</a>
+        <a href="https://api.whatsapp.com/send?phone=79371786301" target="_blank" class="contacts__link title title_fz48 title_orange">WhatsApp</a>
+        <a href="mailto:info@annanekrasova.ru" target="_blank" class="contacts__link title title_fz48 title_orange">email</a>
+        <a href="viber://add?number=79371786301" target="_blank" class="contacts__link title title_fz48 title_orange">viber</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__copyright">©Nekrasova 2020</div>
+    <a href="/policy" class="footer__policy">Политика конфиденциальности</a>
+  </footer>
   
   <script src="js/script.min.js"></script>
 </body>
