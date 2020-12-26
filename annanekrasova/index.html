@@ -4,17 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Front-end разработка и веб-дизайн</title>
+  <!-- Primary Meta Tags -->
+  <title>Фронтенд-разработчик Анна Некрасова </title>
+  <meta name="title" content="Фронтенд-разработчик Анна Некрасова ">
+  <meta name="description" content="Создаю сайты. С помощью кода, графических редакторов и кофе рассказываю о вашем бизнесе миру.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://annanekrasova.ru/">
+  <meta property="og:title" content="Фронтенд-разработчик Анна Некрасова ">
+  <meta property="og:description" content="Создаю сайты. С помощью кода, графических редакторов и кофе рассказываю о вашем бизнесе миру.">
+  <meta property="og:image" content="img/an.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://annanekrasova.ru/">
+  <meta property="twitter:title" content="Фронтенд-разработчик Анна Некрасова ">
+  <meta property="twitter:description" content="Создаю сайты. С помощью кода, графических редакторов и кофе рассказываю о вашем бизнесе миру.">
+  <meta property="twitter:image" content="img/an.jpg">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="img/fav/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/fav/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+
   <canvas id="noise" class="noise"></canvas>
+  
 
   <header class="header">
-    <a href="#up" class="header__logo"><img src="img/icons/logo.svg" alt="nekrasova-logo"></a>
-    <nav class="header__nav">
-      <ul class="header__menu">
+    <a href="#up" class="header__logo">
+      <img src="img/icons/logo.svg" alt="nekrasova-logo">
+    </a>
+    <div class="header_burger">
+      <span></span>
+    </div>
+    <nav class="header__menu">
+      <ul>
         <li><a href="#portfolio" class="header__menu-item">работы</a></li>
         <li><a href="#about" class="header__menu-item">Обо мне</a></li>
         <li><a href="#contacts" class="header__menu-item">Контакты</a></li>
@@ -22,9 +65,9 @@
     </nav>
   </header>
 
-  <section class="main" id="up">
+  <!-- <section class="main" id="up">
     <div class="container">
-      <h1 class="title title_fz96 main__title main__title_star">front end</h1>
+      <h1 class="title title_fz96 main__title main__title_star">front-end</h1>
       <div class="title title_fz96 main__title">разработка</div>
       <div class="title title_fz96 main__title">и веб-дизайн</div>
       <div class="main__text">
@@ -152,9 +195,10 @@
         <div class="about__content">
           <h3 class="title title_fz48 title_orange">привет, я анна)</h3>
           <div class="about__text">
-            <p>Я фронденд-разработчик из Самары, создаю сайты и интернет-магазины для малого и среднего бизнеса, разрабатываю SAP.</p>
-            <p>Не терплю «визуальный мусор» в дизайне, слежу за трендами, ценю минимализм. Мои сайты попадают в подборку madeontilda.</p>
-            <p>Люблю работать с кодом, в свободное время изучаю верстку и JavaScript. Это помогает находить нестандартные решения для ваших сайтов.</p>         
+            <p>Я фронденд-разработчик из Самары, создаю сайты и интернет-магазины для малого и среднего бизнеса.</p>
+            <p>В моем портфолио есть сайты на Тильде и работы по веб-дизайну. Но писать код мне нравится гораздо больше)</p>
+            <p>Много времени уделяю саммобразованию. Учу английский для работы (и конечно, чтобы сериалы смотреть в оригинальной озвучке) и испанский из любви к языку.</p>
+            <p>Веду инстаграм, где рассказываю о своей работе. Так что, если хотите познакомиться поближе — welcome)</p>          
             </div>
           <div class="about__buttons">
             <a href="https://www.instagram.com/anna_webdev" target="_blank" class="about__insta">Instagram</a>
@@ -206,7 +250,7 @@
   <footer class="footer">
     <div class="footer__copyright">©Nekrasova 2020</div>
     <a href="/policy" class="footer__policy">Политика конфиденциальности</a>
-  </footer>
+  </footer> -->
   
   <script src="js/script.min.js"></script>
 </body>

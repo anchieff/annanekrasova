@@ -12,34 +12,59 @@
   border-bottom: $border;
   z-index: 999;
   &__logo {
+    width: 180px;
     img {
-      width: 180px;
+      width: 98%;
     }
   }
 
-  &__nav {
-  }
-
-  &__menu {
-    display: flex;
-    list-style: none;
-    li {
-      margin-right: 85px;
-      &:last-child {
-        margin-right: 0;
+  &__menu {   
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        margin-right: 85px;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
 
   &__menu-item {
     position: relative;
-    font-family: Neue Machina;
+    font-family: Neue Machina, sans-serif;
     font-size: 20px;
     line-height: 19px;
     text-transform: uppercase;
     padding-bottom: 5px;
-    @include border;
-    
+    @include border;  
   }
 }
 
+
+@media (max-width: 1200px) {
+  .header {
+    &__menu {   
+      ul {
+        li {
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    &__logo {
+      width: 140px;
+    }
+    // здесь делаем бургер
+  }
+}
+
+@media (max-width: 576px) {
+
+}
