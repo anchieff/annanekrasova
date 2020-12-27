@@ -102,3 +102,26 @@ for(let anchor of anchors) {
   })
 }
 
+// Menu
+const burger = document.querySelector('.header__burger');
+const menu = document.querySelector('.header__menu');
+const links = document.querySelectorAll('.header__menu-item');
+
+burger.addEventListener('click', function() {
+   if (burger.classList.contains('active')) {
+       burger.classList.remove('active');
+       menu.classList.remove('active');
+   } else {
+    burger.classList.add('active');
+    menu.classList.add('active');
+   }
+});
+
+links.forEach(link => {
+    link.addEventListener('click', function() {
+        burger.classList.remove('active');
+        menu.classList.remove('active');
+    })
+})
+
+

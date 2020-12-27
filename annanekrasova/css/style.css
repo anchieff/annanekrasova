@@ -100,7 +100,12 @@ h3 {
 }
 
 .header__logo img {
+  display: block;
   width: 98%;
+}
+
+.header__burger {
+  display: none;
 }
 
 .header__menu ul {
@@ -159,7 +164,6 @@ h3 {
 
 .main {
   padding-top: 250px;
-  height: 100vh;
   border-bottom: 1px solid #3E3E3E;
 }
 
@@ -170,13 +174,14 @@ h3 {
 }
 
 .main__title_star:before {
-  content: url("../img/icons/star-orange.svg");
+  content: '';
   position: absolute;
   line-height: 0;
   right: -50px;
   top: -35px;
   width: 58px;
   height: 58px;
+  background: url("../../img/icons/star-orange.svg") no-repeat center center/contain;
   -webkit-animation: rotation  4s linear infinite;
           animation: rotation  4s linear infinite;
 }
@@ -187,7 +192,7 @@ h3 {
 
 .main__text {
   padding-left: 560px;
-  margin-top: 80px;
+  margin: 80px 0;
   font-size: 20px;
 }
 
@@ -752,10 +757,201 @@ h3 {
   .header__menu ul li {
     margin-right: 50px;
   }
+
+  .main__text {
+    padding-left: 480px;
+    margin: 60px 0;
+  }
+
+  .title_fz96 {
+    font-size: 80px;
+    line-height: 90px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main {
+    padding-top: 200px;
+  }
+
+  .main__title:nth-child(2) {
+    padding-left: 170px;
+  }
+
+  .main__text {
+    padding-left: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .title_fz96 {
+    font-size: 70px;
+    line-height: 76px;
+  }
 }
 
 @media (max-width: 768px) {
+  .header {
+    height: 60px;
+    padding-top: 2px 20px 2px 20px;
+  }
+
   .header__logo {
     width: 140px;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 2;
+  }
+
+  .header__burger span {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    background-color: #3E3E3E;
+    height: 2px;
+    width: 100%;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  .header__burger::before,
+  .header__burger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-color: #3E3E3E;
+    height: 2px;
+    width: 100%;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+  }
+
+  .header__burger::before {
+    top: 0;
+  }
+
+  .header__burger::after {
+    bottom: 0;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #3E3E3E;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+  }
+
+  .header__menu ul {
+    display: block;
+    padding: 120px 0;
+    text-align: center;
+  }
+
+  .header__menu ul li {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .header__menu ul li a {
+    color: #D9DBDF;
+  }
+
+  .header__menu.active {
+    left: 0;
+  }
+
+  .header__burger.active::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+    background-color: #D9DBDF;
+  }
+
+  .header__burger.active::after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 9px;
+    background-color: #D9DBDF;
+  }
+
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .main {
+    padding-top: 150px;
+  }
+
+  .main__title_star::before {
+    width: 45px;
+    height: 45px;
+    right: -35px;
+  }
+
+  .main__title:nth-child(2) {
+    padding-left: 120px;
+  }
+
+  .main__text {
+    font-size: 18px;
+  }
+
+  .main__text p {
+    width: 420px;
+  }
+
+  .title_fz96 {
+    font-size: 56px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main__title_star {
+    padding-left: 0;
+  }
+
+  .main__title_star::before {
+    height: 30px;
+    width: 30px;
+    right: -25px;
+    top: -22px;
+  }
+
+  .main__title:nth-child(2) {
+    padding-left: 0;
+  }
+
+  .main__text {
+    margin: 40px 0;
+  }
+
+  .main__text p {
+    width: 100%;
+  }
+
+  .title_fz96 {
+    font-size: 33px;
+    line-height: 40px;
   }
 }
