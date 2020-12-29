@@ -1,8 +1,11 @@
 .portfolio {
 padding-top: 176px;
   &__title {
-    &::before {
-      content: url("../img/titles/portfolio.svg")
+    text-align: center;
+    .title_left-circle {
+      &::before {
+        background: url("../img/titles/portfolio.svg") no-repeat center center / contain;
+      }
     }
   }
 
@@ -114,24 +117,148 @@ padding-top: 176px;
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1420px) {
+  .portfolio {
+    &__project {
+      grid-template-columns: 490px 680px;
+      grid-template-rows: auto 90px;
+      align-items: flex-end;
+      column-gap: 30px;
+    }
+    &__content {
+      width: 100%;
+    }
+    &__img {
+      img {
+        width: 100%;
+      }
+    }
+    &__else {
+      grid-template-columns: 520px 680px;
+    }
+    &__posters {
+      width: 100%;
+    }
+  }
+}
 
+@media (max-width: 1280px) {
+  .portfolio {
+    &__project {
+      grid-template-columns: 450px 680px;
+    }
+    &__else {
+      grid-template-columns: 480px 680px;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
-
+  .portfolio {
+    padding-top: 150px;
+    &__project {
+      padding-top: 100px;
+      grid-template-columns: 430px 510px;
+      column-gap: 20px;
+    }
+    &__else {
+      grid-template-columns: 450px 510px;
+    }
+    &__tilda, &__posters {
+      height: 250px;
+    }
+    &__link {
+      font-size: 42px;
+    }
+  }
 }
 
 @media (max-width: 992px) {
+  .portfolio {
+    &__project {
+      padding-top: 100px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 90px;
+      column-gap: 0px;
+      row-gap: 30px;
+    }
+    &__img {
+      grid-row: 1 / 2;
+      grid-column: 1;
+    }
+    &__text {
+      margin-top: 20px;
+      width: 600px;
+    }
+    &__link {
+      font-size: 36px;
+    }
+    &__else {
+      grid-template-columns: 1fr;
+    }
 
+  }
 }
 
 @media (max-width: 768px) {
-
+  .portfolio {
+    padding-top: 130px;
+    &__project {
+    padding-top: 80px;
+    }
+    &__text {
+      width: 100%;
+    }
+    &__links {
+      font-size: 18px;
+    }
+    &__more {
+      &::before{
+        width: 162px;
+        height: 60px;
+      }
+    }
+    &__else {
+      margin-top: 100px;
+    }
+    &__tilda, &__posters {
+      height: 200px;
+    }
+  }
 }
 
 @media (max-width: 576px) {
+  .portfolio {
+    padding-top: 100px;
+    &__project {
+      padding-top: 60px;
+      grid-template-rows: auto auto 60px;
+    }
+    &__more {
+      padding-left: 10px;
+      padding-right: 10px;
+      &:hover{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      &::before {
+        width: 140px;
+        height: 50px;
+        top: -13px;
+      }
+    }
 
+    &__link {
+      font-size: 24px;
+    }
+    &__subtitle {
+      top: 10px;
+      left: 10px;
+    }
+    &__tilda, &__posters {
+      height: 140px;
+    }
+  }
 }
 
 

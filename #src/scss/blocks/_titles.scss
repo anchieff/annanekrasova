@@ -9,10 +9,10 @@
   }
   &_fz85 {
     font-size: 85px;
-    text-align: center;
   }
 
   &_left-circle, &__right-circle {
+    display: inline-block;
     position: relative;
     z-index: 1;
     &::before {
@@ -27,20 +27,15 @@
   }
 
   &_left-circle {
-    padding-left: 116px;
+    padding-left: 150px;
     &::before {
-      content: '';
-      position: absolute;
-      left: 240px;
+      left: 0;
     }
   }
 
   &__right-circle {
-    padding-right: 116px;
     &::before {
-      content: '';
-      position: absolute;
-      right: 240px;
+      right: 0;
     }
   }
 
@@ -64,6 +59,21 @@
       font-size: 80px;
       line-height: 90px;
     }
+    &_fz85 {
+      font-size: 76px;
+    }
+    &_left-circle, &__right-circle {
+      padding-left: 105px;
+      &::before {
+        width: 150px;
+        height: 150px;
+        top: -20px;
+      }
+    }
+    &_fz48 {
+      font-size: 42px;
+      line-height: 48px;
+    }
   }
 
 }
@@ -74,6 +84,21 @@
       font-size: 70px;
       line-height: 76px;
     }
+    &_fz85 {
+      font-size: 58px;
+    }
+    &_left-circle, &__right-circle {
+      padding-left: 88px;
+      &::before {
+        width: 120px;
+        height: 120px;
+        top: -20px;
+      }
+    }
+    &_fz48 {
+      font-size: 36px;
+      line-height: 40px;
+    }
   }
 }
 
@@ -83,6 +108,9 @@
       font-size: 56px;
       line-height: 60px;
     }
+    &_fz85 {
+      font-size: 48px;
+    }
   }
 }
 
@@ -91,6 +119,23 @@
     &_fz96 {
       font-size: 33px;
       line-height: 40px;
+    }
+    &_fz85 {
+      font-size: 32px;
+    }
+    &_left-circle, &__right-circle {
+      &::before {
+        width: 80px;
+        height: 80px;
+        top: -15px;
+      }
+    }
+    &_left-circle {
+      padding-left: 60px;
+    }
+    &_fz48 {
+      font-size: 24px;
+      line-height: 30px;
     }
   }
 }
