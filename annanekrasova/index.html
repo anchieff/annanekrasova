@@ -165,7 +165,7 @@
     </div>
   </section>
 
-  <!-- <section class="choose">
+  <section class="choose">
     <div class="container">
       
         <h3 class="choose__title title title_fz48 title_orange">Выбрать разработчика</h3>
@@ -188,10 +188,18 @@
 
   <section class="about" id="about">
     <div class="container">
-      <h2 class="title title_fz85 title_left-circle about__title">обо мне</h2>
+      <div class="about__title">
+        <h2 class="title title_fz85 title_left-circle">обо мне</h2>
+      </div>
+      
       <div class="about__info">
         <div class="about__photo">
-          <img src="./img/myphoto.jpg" alt="myphoto">
+          <picture>
+            <source media="(max-width: 992px)" srcset="img/myphoto992.jpg">
+            <source media="(min-width: 993px)" srcset="img/myphoto.jpg">
+            <img src="./img/myphoto.jpg" alt="myphoto">
+          </picture>
+          
         </div>
         
         <div class="about__content">
@@ -238,7 +246,10 @@
 
   <section class="contacts" id="contacts">
     <div class="container">
-      <h2 class="title title_fz85 title__right-circle contacts__title">Контакты</h2>
+      <div class="contacts__title">
+        <h2 class="title title_fz85 title__right-circle">Контакты</h2>
+      </div>
+      
       <div class="contacts__info">Я всегда открыта для новых интересных проектов. Свяжитесь со мной любым удобным для вас способом. Давайте поработаем вместе) </div>
       <div class="contacts__links">
         <a href="https://t.me/webnekrasova" target="_blank" class="contacts__link title title_fz48 title_orange">Telegram</a>
@@ -249,7 +260,7 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="footer__copyright">©Nekrasova 2020</div>
     <a href="/policy" class="footer__policy">Политика конфиденциальности</a>
   </footer> -->

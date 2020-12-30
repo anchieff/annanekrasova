@@ -34,6 +34,7 @@
   }
 
   &__right-circle {
+    padding-right: 150px;
     &::before {
       right: 0;
     }
@@ -63,12 +64,18 @@
       font-size: 76px;
     }
     &_left-circle, &__right-circle {
-      padding-left: 105px;
       &::before {
         width: 150px;
         height: 150px;
         top: -20px;
       }
+    }
+    &_left-circle {
+      padding-left: 105px;
+
+    }
+    &__right-circle {
+      padding-right: 105px;
     }
     &_fz48 {
       font-size: 42px;
@@ -88,12 +95,17 @@
       font-size: 58px;
     }
     &_left-circle, &__right-circle {
-      padding-left: 88px;
       &::before {
         width: 120px;
         height: 120px;
         top: -20px;
       }
+    }
+    &_left-circle {
+      padding-left: 88px;
+    }
+    &__right-circle {
+      padding-right: 88px;
     }
     &_fz48 {
       font-size: 36px;
@@ -133,8 +145,11 @@
     &_left-circle {
       padding-left: 60px;
     }
+    &__right-circle {
+      padding-right: 60px;
+    }
     &_fz48 {
-      font-size: 24px;
+      font-size: 20px;
       line-height: 30px;
     }
   }

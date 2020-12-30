@@ -1,11 +1,13 @@
 .contacts {
   padding-top: 140px;
   &__title {
-  
-    &::before {
-      content: url('../img/titles/contacts.svg');
-      right: 305px;
+    text-align: center;
+    .title__right-circle {
+      &::before {
+        background: url('../img/titles/contacts.svg') no-repeat center center / contain;
+      }
     }
+    
   }
 
   &__info {
@@ -56,6 +58,19 @@
       }
     }
     
+  }
+}
+
+@media (max-width: 1420px) {
+  .contacts {
+    &__link {
+      &:nth-child(2) {
+        justify-self: center;
+        &::after{
+          left: 144px;
+        }
+      }
+    }
   }
 }
 
