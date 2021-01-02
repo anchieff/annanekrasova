@@ -21,6 +21,13 @@ h1, h2, h3 {
   margin: 0;
 }
 
+input, textarea {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
 .noise {
   z-index: 1000;
   position: fixed;

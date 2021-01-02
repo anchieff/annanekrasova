@@ -125,3 +125,20 @@ links.forEach(link => {
 })
 
 
+// Modal
+const modal = document.querySelector('.overlay');
+const modalButtons = document.querySelectorAll('a[href^="#modal"]');
+const close = document.querySelector('.modal__close');
+
+modalButtons.forEach(item => {
+    item.addEventListener('click', function() {
+        modal.classList.add('active');
+    })
+})
+
+close.addEventListener('click', function() {
+    modal.classList.remove('active');
+})
+
+
+
