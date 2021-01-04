@@ -788,17 +788,18 @@ textarea:focus {
 }
 
 .modal.active {
-  top: 0;
+  top: 50%;
   opacity: 1;
   visibility: visible;
 }
 
 .modal {
-  margin: 65px auto;
+  position: absolute;
   top: -100%;
-  position: relative;
-  left: auto;
-  right: auto;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
   padding: 50px 45px;
@@ -1662,7 +1663,6 @@ textarea.form__input {
   }
 
   .modal {
-    margin-top: 30px;
     padding-top: 45px;
     width: 490px;
   }

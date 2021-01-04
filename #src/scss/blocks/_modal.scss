@@ -18,17 +18,29 @@
 }
 
 .modal.active {
-  top: 0;
+  top: 50%;
   opacity: 1;
   visibility: visible;
 }
 
+// #thanks {
+//   display: none;
+// }
+
+// #thanks.active {
+//   display: block;
+// }
+
 .modal {
-  margin: 65px auto;
+  // margin: 65px auto;
+  // top: -100%;
+  // position: relative;
+  // left: auto;
+  // right: auto;
+  position: absolute;
   top: -100%;
-  position: relative;
-  left: auto;
-  right: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
   padding: 50px 45px;
@@ -183,7 +195,7 @@ textarea.form__input {
 
 @media (max-width: 768px) {
   .modal {
-    margin-top: 30px;
+    // margin-top: 30px;
     padding-top: 45px;
     width: 490px;
     &__descr {
