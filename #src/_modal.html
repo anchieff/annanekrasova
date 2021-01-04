@@ -1,5 +1,6 @@
 <div class="overlay">
-  <div class="modal">
+
+  <div class="modal" id="request">
     <div class="modal__close">
       <svg class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
         <g stroke="none" stroke-width="1" fill="#B12B00" fill-rule="evenodd">
@@ -10,14 +11,16 @@
     </div>
     <div class="modal__subtitle">Оставьте заявку на сайт</div>
     <div class="modal__descr">Заполните форму, и я свяжусь с вами в ближайшее время</div>
-    <form action="#" class="feed__form" id="form">
+    <form class="feed__form" id="form" action="#">
       <div class="form__item">
         <label for="formName" class="form__label">Ваше имя*</label>
-        <input id="formName" name="name" required type="text" class="form__input">
+        <input id="formName" name="name" type="text" class="form__input _req">
+        <div class="warn">Заполните обязательное поле</div>
       </div>
       <div class="form__item">
         <label for="formEmail" class="form__label">Ваш email*</label>
-        <input id="formEmail" name="email" required type="text" class="form__input">
+        <input id="formEmail" name="email" type="text" class="form__input _req _email">
+        <div class="warn">Заполните обязательное поле</div>
       </div>
       <div class="form__item">
         <label for="formMessage" class="form__label">Расскажите о вашем проекте</label>
@@ -25,13 +28,15 @@
       </div>
       <div class="form__item">
         <div class="checkbox">
-          <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input">
+          <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
           <label for="formAgreement" class="checkbox__label"><span>Я согласен(а) с <a href="/policy">Политикой конфиденциальности</a></span></label>
+          <div class="warn">Заполните обязательное поле</div>
         </div>
       </div>
       <button type="submit" class="form__button">Отправить</button>
     </form>
   </div> 
+
   <div class="modal" id="thanks">
     <div class="modal__close">
       <svg class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
