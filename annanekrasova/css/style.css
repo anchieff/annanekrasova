@@ -944,6 +944,53 @@ textarea.form__input {
   color: red;
 }
 
+.posters {
+  margin-top: 140px;
+}
+
+.posters__title {
+  text-align: center;
+}
+
+.posters__title .title_left-circle {
+  padding-left: 158px;
+}
+
+.posters__title .title_left-circle::before {
+  background: url("../img/titles/posters.svg") no-repeat center center/contain;
+}
+
+.posters__descr {
+  margin-top: 80px;
+  width: 480px;
+}
+
+.posters__gallery {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto, 575px;
+  gap: 30px;
+}
+
+.posters__item {
+  -webkit-box-shadow: 0 0 10px rgba(62, 62, 62, 0.2);
+          box-shadow: 0 0 10px rgba(62, 62, 62, 0.2);
+  line-height: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.posters__item img {
+  width: 100%;
+}
+
+.posters__item:hover {
+  -webkit-box-shadow: 0 0 20px rgba(62, 62, 62, 0.6);
+          box-shadow: 0 0 20px rgba(62, 62, 62, 0.6);
+}
+
 @media (max-width: 1420px) {
   .container {
     width: 1200px;
@@ -1180,6 +1227,10 @@ textarea.form__input {
   .contacts__link:nth-child(4)::after {
     left: 44px;
   }
+
+  .posters__title .title_left-circle {
+    padding-left: 113px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1357,6 +1408,20 @@ textarea.form__input {
   .form__label {
     font-size: 18px;
     margin-bottom: 0;
+  }
+
+  .posters__title .title_left-circle {
+    padding-left: 91px;
+  }
+
+  .posters__descr {
+    margin-top: 60px;
+  }
+
+  .posters__gallery {
+    margin-top: 60px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
 }
 
@@ -1698,6 +1763,41 @@ textarea.form__input {
   .checkbox__label::after {
     top: 5px;
     left: 3px;
+  }
+
+  .posters__title .title_left-circle {
+    padding-left: 96px;
+  }
+
+  .posters__descr {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  .posters__gallery {
+    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .posters {
+    margin-top: 100px;
+  }
+
+  .posters__title .title_left-circle {
+    padding-left: 64px;
+  }
+
+  .posters__descr {
+    margin-top: 40px;
+  }
+
+  .posters__gallery {
+    margin-top: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
   }
 }
 

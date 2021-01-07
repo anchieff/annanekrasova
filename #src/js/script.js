@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     noise();
   
-    // Smooth scroll =====================================================================
+    // // Smooth scroll =====================================================================
   
     const anchors = document.querySelectorAll('a[href^="#"]')
     
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   
   
-    // Modal ============================================================================
+    // // Modal ============================================================================
     const modal = document.querySelector('.overlay');
     const modalButtons = document.querySelectorAll('a[href^="#modal"]');
     const close = document.querySelectorAll('.modal__close');
@@ -230,7 +230,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
 
+    // Gallery ==========================================================================
+    @@include('fslightbox.js');
+
     
-
-
 });
