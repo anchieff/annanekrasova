@@ -21,9 +21,6 @@ padding-top: 176px;
     width: 500px;
   }
 
-  &__project-title {
-  }
-
   &__text {
     margin-top: 40px;
   }
@@ -238,8 +235,8 @@ padding-top: 176px;
       padding-left: 10px;
       padding-right: 10px;
       &:hover{
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
       &::before {
         width: 140px;

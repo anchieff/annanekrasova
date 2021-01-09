@@ -159,7 +159,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form ===============================================================================
     const form = document.getElementById('form');
-    form.addEventListener('submit', formSend);
+    if (form) {
+        form.addEventListener('submit', formSend);
+    }
+    
 
     async function formSend(e) {
         console.log("Отправка запроса");

@@ -176,7 +176,7 @@
       
         <h3 class="choose__title title title_fz48 title_orange">Выбрать разработчика</h3>
         <h3 class="choose__title title title_fz48 title_orange">для своего проекта </h3>
-        <h3 class="choose__title title title_fz48 title_orange">бывает непросто.</h3>
+        <h3 class="choose__title title title_fz48 title_orange">бывает непросто</h3>
      
       <div class="choose__content">
         <div class="choose__img">
@@ -265,10 +265,69 @@
       </div>
     </div>
   </section>
+  
+  <div class="overlay">
 
-  <footer class="footer">
+  <div class="modal" id="request">
+    <div class="modal__close">
+      <svg class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+        <g stroke="none" stroke-width="1" fill="#B12B00" fill-rule="evenodd">
+        <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect>
+        <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect> 
+        </g> 
+      </svg>
+    </div>
+    <div class="modal__subtitle">Оставьте заявку на сайт</div>
+    <div class="modal__descr">Заполните форму, и я свяжусь с вами в ближайшее время</div>
+    <form class="feed__form" id="form" action="#">
+      <div class="form__item">
+        <label for="formName" class="form__label">Ваше имя*</label>
+        <input id="formName" name="name" type="text" class="form__input _req">
+        <div class="warn">Заполните обязательное поле</div>
+      </div>
+      <div class="form__item">
+        <label for="formEmail" class="form__label">Ваш email*</label>
+        <input id="formEmail" name="email" type="text" class="form__input _req _email">
+        <div class="warn">Заполните обязательное поле</div>
+      </div>
+      <div class="form__item">
+        <label for="formMessage" class="form__label">Расскажите о вашем проекте</label>
+        <textarea name="message" id="formMessage" class="form__input"></textarea>
+      </div>
+      <div class="form__item">
+        <div class="checkbox">
+          <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
+          <label for="formAgreement" class="checkbox__label"><span>Я согласен(а) с <a href="/policy.html">Политикой конфиденциальности</a></span></label>
+          <div class="warn">Заполните обязательное поле</div>
+        </div>
+      </div>
+      <button type="submit" class="form__button">Отправить</button>
+    </form>
+  </div> 
+
+  <div class="modal" id="thanks">
+    <div class="modal__close">
+      <svg class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+        <g stroke="none" stroke-width="1" fill="#B12B00" fill-rule="evenodd">
+        <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect>
+        <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect> 
+        </g> 
+      </svg>
+    </div>
+    <div class="modal__subtitle">Спасибо за заявку!</div>
+    <div class="modal__descr">Я свяжусь с вами в ближайшее время)</div>
+  </div>
+</div>
+  <div class="order-button">
+  <a href="#modal" class="order-button__link">
+    <img class="order-button__star" src="img/icons/star-orange.svg" alt="">
+    <img class="order-button__content" src="img/titles/order.svg" alt="">
+  </a>
+</div>
+
+<footer class="footer">
   <div class="footer__copyright">©Nekrasova 2020</div>
-  <a href="/policy" class="footer__policy">Политика конфиденциальности</a>
+  <a href="/policy.html" class="footer__policy">Политика конфиденциальности</a>
 </footer> 
   
   <script src="https://kit.fontawesome.com/ec5b7ba5be.js" crossorigin="anonymous"></script>

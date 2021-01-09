@@ -84,6 +84,40 @@ textarea:focus {
   }
 }
 
+@-webkit-keyframes rotation-pause {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  57% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation-pause {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  57% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -196,8 +230,8 @@ textarea:focus {
   width: 58px;
   height: 58px;
   background: url("../../img/icons/star-orange.svg") no-repeat center center/contain;
-  -webkit-animation: rotation  4s linear infinite;
-          animation: rotation  4s linear infinite;
+  -webkit-animation: rotation-pause  7s linear infinite;
+          animation: rotation-pause  7s linear infinite;
 }
 
 .main__title:nth-child(2) {
@@ -991,6 +1025,76 @@ textarea.form__input {
           box-shadow: 0 0 20px rgba(62, 62, 62, 0.6);
 }
 
+.policy {
+  margin-top: 140px;
+}
+
+.policy__title {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.policy__title .title {
+  text-transform: none;
+}
+
+.policy__content {
+  margin: 80px auto 0;
+  max-width: 900px;
+}
+
+.policy__item div {
+  margin-bottom: 10px;
+}
+
+.policy__item ol {
+  padding: 20px 0 20px 50px;
+}
+
+.policy a {
+  color: #B12B00;
+}
+
+.order-button {
+  position: fixed;
+  bottom: 29px;
+  right: 20px;
+}
+
+.order-button:hover .order-button__content {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.order-button__link {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+  font-size: 0;
+  line-height: 0;
+}
+
+.order-button__star {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.order-button__content {
+  -webkit-transition: all 3s;
+  -o-transition: all 3s;
+  transition: all 3s;
+  width: 100%;
+}
+
 @media (max-width: 1420px) {
   .container {
     width: 1200px;
@@ -1079,6 +1183,12 @@ textarea.form__input {
 
   .tech__img {
     width: 480px;
+  }
+
+  .order-button {
+    width: 140px;
+    height: 140px;
+    bottom: 39px;
   }
 }
 
@@ -1230,6 +1340,12 @@ textarea.form__input {
 
   .posters__title .title_left-circle {
     padding-left: 113px;
+  }
+
+  .order-button {
+    width: 120px;
+    height: 120px;
+    bottom: 49px;
   }
 }
 
@@ -1422,6 +1538,24 @@ textarea.form__input {
     margin-top: 60px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+  }
+
+  .policy {
+    margin-top: 120px;
+  }
+
+  .policy__title {
+    max-width: 100%;
+  }
+
+  .policy__content {
+    margin-top: 40px;
+  }
+
+  .order-button {
+    width: 100px;
+    height: 100px;
+    bottom: 20px;
   }
 }
 
@@ -1799,6 +1933,12 @@ textarea.form__input {
     grid-template-rows: auto;
     gap: 20px;
   }
+
+  .order-button {
+    width: 90px;
+    height: 90px;
+    bottom: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1873,8 +2013,8 @@ textarea.form__input {
   }
 
   .portfolio__more:hover {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .portfolio__more::before {
@@ -1991,5 +2131,29 @@ textarea.form__input {
   .modal__subtitle {
     font-size: 24px;
     line-height: 28px;
+  }
+
+  .policy {
+    margin-top: 80px;
+  }
+
+  .policy__item {
+    margin-left: 15px;
+  }
+
+  .policy__item ol {
+    padding: 20px 0 20px 20px;
+  }
+
+  .policy__content {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+
+  .order-button {
+    width: 70px;
+    height: 70px;
+    right: 10px;
+    bottom: 10px;
   }
 }
