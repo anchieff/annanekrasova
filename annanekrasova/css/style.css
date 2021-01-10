@@ -45,7 +45,7 @@ textarea:focus {
 }
 
 .noise {
-  z-index: 1000;
+  z-index: 100000;
   position: fixed;
   top: 0;
   left: 0;
@@ -115,6 +115,40 @@ textarea:focus {
   100% {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -1095,6 +1129,130 @@ textarea.form__input {
   width: 100%;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #D9DBDF;
+  z-index: 10000;
+  will-change: transform;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.preloader__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  display: block;
+  overflow: hidden;
+}
+
+.preloader__content div {
+  height: 100%;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  -webkit-animation: rotate linear 3.5s infinite;
+          animation: rotate linear 3.5s infinite;
+  border-top-color: #3E3E3E;
+  border-bottom-color: #B12B00;
+  will-change: transform;
+}
+
+.preloader__content div:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.preloader.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bakery {
+  padding-top: 176px;
+}
+
+.bakery__title {
+  text-align: center;
+}
+
+.bakery__title .title_left-circle {
+  padding-left: 157px;
+}
+
+.bakery__title .title_left-circle::before {
+  background: url("../img/titles/bakery.svg") no-repeat center center/contain;
+}
+
+.bakery__content {
+  margin-top: 80px;
+}
+
+.bakery__content img {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.bakery__descr {
+  width: 480px;
+}
+
+.fitness {
+  padding-top: 176px;
+}
+
+.fitness__title {
+  text-align: center;
+}
+
+.fitness__title .title_left-circle {
+  padding-left: 157px;
+}
+
+.fitness__title .title_left-circle::before {
+  background: url("../img/titles/fitness.svg") no-repeat center center/contain;
+}
+
+.fitness__descr {
+  margin-top: 80px;
+  width: 480px;
+}
+
+.fitness__tabs {
+  margin-top: 80px;
+}
+
+.tabs-triggers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tabs-triggers__item {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.tabs-content {
+  margin-top: 60px;
+}
+
+.tabs-content__item {
+  width: 100%;
+}
+
 @media (max-width: 1420px) {
   .container {
     width: 1200px;
@@ -1347,6 +1505,10 @@ textarea.form__input {
     height: 120px;
     bottom: 49px;
   }
+
+  .bakery__title .title_left-circle {
+    padding-left: 115px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1556,6 +1718,18 @@ textarea.form__input {
     width: 100px;
     height: 100px;
     bottom: 20px;
+  }
+
+  .bakery__title .title_left-circle {
+    padding-left: 90px;
+  }
+
+  .bakery__content {
+    margin-top: 60px;
+  }
+
+  .bakery__content img {
+    margin-top: 60px;
   }
 }
 
@@ -1939,6 +2113,18 @@ textarea.form__input {
     height: 90px;
     bottom: 20px;
   }
+
+  .bakery {
+    padding-top: 120px;
+  }
+
+  .bakery__title .title_left-circle {
+    padding-left: 96px;
+  }
+
+  .bakery__descr {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -2129,8 +2315,24 @@ textarea.form__input {
   }
 
   .modal__subtitle {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 28px;
+  }
+
+  .modal textarea.form__input {
+    min-height: 60px;
+  }
+
+  .warn {
+    margin-top: 2px;
+  }
+
+  .form__item {
+    margin-bottom: 10px;
+  }
+
+  .form__button {
+    padding: 15px 0;
   }
 
   .policy {
@@ -2155,5 +2357,25 @@ textarea.form__input {
     height: 70px;
     right: 10px;
     bottom: 10px;
+  }
+
+  .bakery {
+    padding-top: 100px;
+  }
+
+  .bakery__title .title_left-circle {
+    padding-left: 65px;
+  }
+
+  .bakery__title .title_fz85 {
+    font-size: 28px;
+  }
+
+  .bakery__content {
+    margin-top: 40px;
+  }
+
+  .bakery__content img {
+    margin-top: 40px;
   }
 }

@@ -2,6 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    //loader ============================================================================
+    setTimeout(function() {
+        const preloader = document.getElementById('preloader');
+        if (preloader && !preloader.classList.contains('done')) {
+            preloader.classList.add('done')
+        }
+    }, 1500)
+
     // Эффект шума =======================================================================================
     const noise = () => {
         let canvas, ctx;
@@ -234,7 +242,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Gallery ==========================================================================
-    @@include('fslightbox.js');
+    @@include('fslightbox.js')
 
-    
+    // Tabs =============================================================================
+    const triggers = document.querySelectorAll('.tabs-triggers__item');
+    const content = document.querySelectorAll('.tabs-content__item');
+
+    triggers.forEach((item) =>
+        item.addEventListener('click', function(e) {
+            console.log(triggers[item]);
+            console.log(content[item]);
+            e.preventDefault();
+            const id = e.target.getAttribute('href').replace('#', '');
+
+            triggers.forEach(
+                (child) => child.classList.remove('tabs-triggers__item--active')
+            )
+
+            content.forEach(
+                (child) => child.classList.remove('tabs-content__item--active')
+            )
+
+            item.classList.add('tabs-triggers__item--active');
+            document.getElementById(id).classList.add('tabs-content__item--active');
+        })
+    );
+
+    triggers[0].click();
 });

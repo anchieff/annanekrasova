@@ -1,0 +1,35 @@
+.fitness {
+  padding-top: 176px;
+  &__title {
+    text-align: center;
+    .title_left-circle {
+      padding-left: 157px;
+      &::before {
+        background: url("../img/titles/fitness.svg") no-repeat center center / contain;
+      }
+    }
+  }
+
+  &__descr {
+    margin-top: 80px;
+    width: 480px;
+  }
+
+  &__tabs {
+    margin-top: 80px;
+  }
+}
+
+.tabs-triggers {
+  display: flex;
+  &__item {
+    flex-basis: 50%;
+  }
+}
+.tabs-content {
+  margin-top: 60px;
+
+  &__item {
+    width: 100%;
+  }
+}

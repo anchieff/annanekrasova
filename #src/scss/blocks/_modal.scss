@@ -223,8 +223,22 @@ textarea.form__input {
     width: 300px;
     padding: 45px 10px 30px;
     &__subtitle {
-      font-size: 24px;
+      font-size: 22px;
       line-height: 28px;
+    }
+    textarea.form__input {
+      min-height: 60px;
+    }
+  }
+  .warn {
+    margin-top: 2px;
+  }
+  .form {
+    &__item {
+      margin-bottom: 10px;
+    }
+    &__button {
+      padding: 15px 0;
     }
   }
 }
