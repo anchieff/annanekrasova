@@ -37,3 +37,15 @@
   visibility: hidden;
 }
 
+@media (max-width: 576px) {
+  .preloader {
+    &__content {
+      width: 100px;
+      height: 100px;
+      div {
+        padding: 5px;
+      }
+    }
+  }
+}
+

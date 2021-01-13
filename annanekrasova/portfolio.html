@@ -35,10 +35,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="img/fav/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
@@ -55,7 +51,8 @@
   </div>
   <nav class="header__menu">
     <ul>
-      <li><a href="/#portfolio" class="header__menu-item">работы</a></li>
+      <li><a href="/portfolio.html" class="header__menu-item">портфолио</a></li>
+      <li><a href="/posters.html" class="header__menu-item">постеры</a></li>
       <li><a href="/#about" class="header__menu-item">Обо мне</a></li>
       <li><a href="/#contacts" class="header__menu-item">Контакты</a></li>
     </ul>
@@ -101,7 +98,7 @@
 
         </div>
         <a href="http://marblestore.tilda.ws/" class="portfolio__img" target="_blank">
-          <img src="img/portfolio/marble.jpg" alt="marblestore">
+          <img src="img/portfolio/marble.jpg" alt="marblestore" class="lazyload">
         </a>
         
       </div>
@@ -115,7 +112,7 @@
           <a href="https://ariesastrolog.ru" class="portfolio__more " target="_blank">Смотреть проект</a>
         </div>
         <a href="https://ariesastrolog.ru" target="_blank"  class="portfolio__img">
-          <img src="img/portfolio/astrolog.jpg" alt="astrolog">
+          <img src="img/portfolio/astrolog.jpg" alt="astrolog" class="lazyload">
         </a>    
       </div>
 
@@ -128,7 +125,7 @@
           <a href="https://gusflowers.online/" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
         <a href="https://gusflowers.online/" target="_blank" class="portfolio__img">
-          <img src="img/portfolio/gusflowers.jpg" alt="gusflowers">
+          <img src="img/portfolio/gusflowers.jpg" alt="gusflowers" class="lazyload">
         </a>
       </div>
 
@@ -141,7 +138,7 @@
           <a href="https://mr-fuoco.ru/" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
         <a href="https://mr-fuoco.ru/" target="_blank" class="portfolio__img">
-          <img src="img/portfolio/fuoco.jpg" alt="mr.fuoco">
+          <img src="img/portfolio/fuoco.jpg" alt="mr.fuoco" class="lazyload">
         </a>
       </div>
 
@@ -154,7 +151,7 @@
           <a href="https://j-buket.ru/" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
         <a href="https://j-buket.ru/" target="_blank" class="portfolio__img">
-          <img src="img/portfolio/jack.jpg" alt="jackbouqet">
+          <img src="img/portfolio/jack.jpg" alt="jackbouqet" class="lazyload">
         </a>
       </div>
 
@@ -167,7 +164,7 @@
           <a href="https://robosklad.rent/" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
         <a href="https://robosklad.rent/" target="_blank" class="portfolio__img">
-          <img src="img/portfolio/robosklad.jpg" alt="robosklad">
+          <img src="img/portfolio/robosklad.jpg" alt="robosklad" class="lazyload">
         </a>
       </div>
 
@@ -180,7 +177,7 @@
           <a href="/fitness.html" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
         <a href="/fitness.html" target="_blank" class="portfolio__img">
-          <img src="img/portfolio/fitness.jpg" alt="fitness">
+          <img src="img/portfolio/fitness.jpg" alt="fitness" class="lazyload">
         </a>
       </div>
 
@@ -193,7 +190,7 @@
           <a href="/cake.html" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
         <a href="/cake.html" target="_blank" class="portfolio__img">
-          <img src="img/portfolio/cake.jpg" alt="cake">
+          <img src="img/portfolio/cake.jpg" alt="cake" class="lazyload">
         </a>
       </div>
 
@@ -272,9 +269,10 @@
 </div>
 
 <footer class="footer">
-  <div class="footer__copyright">©Nekrasova 2020</div>
+  <div class="footer__copyright">©Nekrasova 2020-2021</div>
   <a href="/policy.html" class="footer__policy">Политика конфиденциальности</a>
 </footer> 
+  <script src="js/lazysizes.min.js"></script>
   <script src="https://kit.fontawesome.com/ec5b7ba5be.js" crossorigin="anonymous"></script>
   <script src="js/script.min.js"></script>
 </body>

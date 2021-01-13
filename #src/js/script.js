@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (preloader && !preloader.classList.contains('done')) {
             preloader.classList.add('done')
         }
-    }, 1500)
+    }, 1000)
 
     // Эффект шума =======================================================================================
     const noise = () => {
@@ -104,13 +104,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     for(let anchor of anchors) {
         anchor.addEventListener("click", function(e) {
-        e.preventDefault() 
-        const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+            e.preventDefault() 
+            const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+            
+            if (goto) {
+                document.querySelector(goto).scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                })
+            }
         
-        document.querySelector(goto).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        })
         })
     }
   
@@ -241,32 +244,29 @@ document.addEventListener('DOMContentLoaded', function() {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
 
-    // Gallery ==========================================================================
-    @@include('fslightbox.js')
 
     // Tabs =============================================================================
     const triggers = document.querySelectorAll('.tabs-triggers__item');
     const content = document.querySelectorAll('.tabs-content__item');
 
-    triggers.forEach((item) =>
+    triggers.forEach((item, i) =>
         item.addEventListener('click', function(e) {
-            console.log(triggers[item]);
-            console.log(content[item]);
             e.preventDefault();
-            const id = e.target.getAttribute('href').replace('#', '');
 
             triggers.forEach(
                 (child) => child.classList.remove('tabs-triggers__item--active')
             )
-
             content.forEach(
                 (child) => child.classList.remove('tabs-content__item--active')
             )
 
             item.classList.add('tabs-triggers__item--active');
-            document.getElementById(id).classList.add('tabs-content__item--active');
+            content[i].classList.add('tabs-content__item--active');
         })
     );
-
-    triggers[0].click();
+    
+    if (triggers[0]) {
+        triggers[0].click();
+    }
+    
 });

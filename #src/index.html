@@ -36,11 +36,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="img/fav/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  
+    
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -58,7 +54,8 @@
     </div>
     <nav class="header__menu">
       <ul>
-        <li><a href="#portfolio" class="header__menu-item">работы</a></li>
+        <li><a href="/portfolio.html" class="header__menu-item">портфолио</a></li>
+        <li><a href="/posters.html" class="header__menu-item">постеры</a></li>
         <li><a href="#about" class="header__menu-item">Обо мне</a></li>
         <li><a href="#contacts" class="header__menu-item">Контакты</a></li>
       </ul>
@@ -98,7 +95,7 @@
           <a href="https://github.com/anchieff/ravnovesie" class="portfolio__github" target="_blank">На GitHub</a>
         </div>
         <a href="https://ravnovesie.annanekrasova.ru" class="portfolio__img" target="_blank">
-          <img src="img/portfolio/ravnovesie.jpg" alt="yoga-studio">
+          <img src="img/portfolio/ravnovesie.jpg" alt="yoga-studio" class="lazyload">
         </a>
         
       </div>
@@ -113,7 +110,7 @@
           <a href="https://github.com/anchieff/stroycontrol" class="portfolio__github" target="_blank">На GitHub</a>
         </div>
         <a href="https://stroycontrol.annanekrasova.ru" target="_blank"  class="portfolio__img">
-          <img src="img/portfolio/stroycontrol.jpg" alt="stroycontrol">
+          <img src="img/portfolio/stroycontrol.jpg" alt="stroycontrol" class="lazyload">
         </a>    
       </div>
 
@@ -126,7 +123,7 @@
           <a href="https://gusflowers.online/" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
         <a href="https://gusflowers.online/" target="_blank" class="portfolio__img">
-          <img src="img/portfolio/gusflowers.jpg" alt="gusflowers">
+          <img src="img/portfolio/gusflowers.jpg" alt="gusflowers" class="lazyload">
         </a>
       </div>
 
@@ -139,7 +136,7 @@
           <a href="https://mr-fuoco.ru/" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
         <a href="https://mr-fuoco.ru/" target="_blank" class="portfolio__img">
-          <img src="img/portfolio/fuoco.jpg" alt="mr.fuoco">
+          <img src="img/portfolio/fuoco.jpg" alt="mr.fuoco" class="lazyload">
         </a>
       </div>
 
@@ -152,7 +149,7 @@
           <a href="https://j-buket.ru/" target="_blank" class="portfolio__more">Смотреть проект</a>
         </div>
         <a href="https://j-buket.ru/" target="_blank" class="portfolio__img">
-          <img src="img/portfolio/jack.jpg" alt="jackbouqet">
+          <img src="img/portfolio/jack.jpg" alt="jackbouqet" class="lazyload">
         </a>
       </div>
 
@@ -269,6 +266,7 @@
   @@include('_modal.html')
   @@include('_footer.html')
   
+  <script src="js/lazysizes.min.js"></script>
   <script src="https://kit.fontawesome.com/ec5b7ba5be.js" crossorigin="anonymous"></script>
   <script src="js/script.min.js"></script>
 </body>
