@@ -1,147 +1,1 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Primary Meta Tags -->
-    <title>Пекарня | Фронтенд-разработчик Анна Некрасова</title>
-    <meta name="title" content="Пекарня | Фронтенд-разработчик Анна Некрасова ">
-    <meta name="description" content="Разработка дизайн-концепта для пекарни">
-  
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://annanekrasova.ru/">
-    <meta property="og:title" content="Пекарня | Фронтенд-разработчик Анна Некрасова ">
-    <meta property="og:description" content="Разработка дизайн-концепта для пекарни">
-    <meta property="og:image" content="img/an.jpg">
-  
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://annanekrasova.ru/">
-    <meta property="twitter:title" content="Пекарня | Фронтенд-разработчик Анна Некрасова ">
-    <meta property="twitter:description" content="Разработка дизайн-концепта для пекарни">
-    <meta property="twitter:image" content="img/an.jpg">
-  
-    <link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/fav/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-        
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-<body>
-  <canvas id="noise" class="noise"></canvas>
-<header class="header">
-  <a href="/" class="header__logo">
-    <img src="img/icons/logo.svg" alt="nekrasova-logo">
-  </a>
-  <div class="header__burger">
-    <span></span>
-  </div>
-  <nav class="header__menu">
-    <ul>
-      <li><a href="/portfolio.html" class="header__menu-item">портфолио</a></li>
-      <li><a href="/posters.html" class="header__menu-item">постеры</a></li>
-      <li><a href="/#about" class="header__menu-item">Обо мне</a></li>
-      <li><a href="/#contacts" class="header__menu-item">Контакты</a></li>
-    </ul>
-    <div class="header__menu-icons">
-      <div>Лайк, подписка, колокольчик)</div>
-      <a href="https://www.instagram.com/anna_webdev" target="_blank" class="header__link"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/anchieff" target="_blank" class="header__link"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/anna-nekrasova-518b70200/" target="_blank" class="header__link"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </nav>
-</header>
-
-  <section class="bakery">
-    <div class="container">
-      <div class="bakery__title">
-        <h1 class="title title_fz85 title_left-circle">ПЕЧЕМ ПИРОГИ</h1>
-      </div>
-      <div class="bakery__content">
-        <div class="bakery__descr">
-          Разработала дизайн главной страницы для пекарни. Пожелания от заказчика — теплые цвета, уютная атмосфера, выпечка, как у бабушки.
-        </div>
-        <img src="./img/portfolio/bakery.jpg" alt="">
-      </div>
-    </div>
-  </section>
-
-  <div class="overlay">
-
-  <div class="modal" id="request">
-    <div class="modal__close">
-      <svg class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
-        <g stroke="none" stroke-width="1" fill="#B12B00" fill-rule="evenodd">
-        <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect>
-        <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect> 
-        </g> 
-      </svg>
-    </div>
-    <div class="modal__subtitle">Оставьте заявку на сайт</div>
-    <div class="modal__descr">Заполните форму, и я свяжусь с вами в ближайшее время</div>
-    <form class="feed__form" id="form" action="#">
-      <div class="form__item">
-        <label for="formName" class="form__label">Ваше имя*</label>
-        <input id="formName" name="name" type="text" class="form__input _req">
-        <div class="warn">Заполните обязательное поле</div>
-      </div>
-      <div class="form__item">
-        <label for="formEmail" class="form__label">Ваш email*</label>
-        <input id="formEmail" name="email" type="text" class="form__input _req _email">
-        <div class="warn">Заполните обязательное поле</div>
-      </div>
-      <div class="form__item">
-        <label for="formMessage" class="form__label">Расскажите о вашем проекте</label>
-        <textarea name="message" id="formMessage" class="form__input"></textarea>
-      </div>
-      <div class="form__item">
-        <div class="checkbox">
-          <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
-          <label for="formAgreement" class="checkbox__label"><span>Я согласен(а) с <a href="/policy.html">Политикой конфиденциальности</a></span></label>
-          <div class="warn">Заполните обязательное поле</div>
-        </div>
-      </div>
-      <button type="submit" class="form__button">Отправить</button>
-    </form>
-  </div> 
-
-  <div class="modal" id="thanks">
-    <div class="modal__close">
-      <svg class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
-        <g stroke="none" stroke-width="1" fill="#B12B00" fill-rule="evenodd">
-        <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect>
-        <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect> 
-        </g> 
-      </svg>
-    </div>
-    <div class="modal__subtitle">Спасибо за заявку!</div>
-    <div class="modal__descr">Я свяжусь с вами в ближайшее время)</div>
-  </div>
-</div>
-  <div class="order-button">
-  <a href="#modal" class="order-button__link">
-    <img class="order-button__star" src="img/icons/star-orange.svg" alt="">
-    <img class="order-button__content" src="img/titles/order.svg" alt="">
-  </a>
-</div>
-
-<footer class="footer">
-  <div class="footer__copyright">©Nekrasova 2020-2021</div>
-  <a href="/policy.html" class="footer__policy">Политика конфиденциальности</a>
-</footer> 
-  <script src="https://kit.fontawesome.com/ec5b7ba5be.js" crossorigin="anonymous"></script>
-  <script src="js/script.min.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="ru">  <head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Primary Meta Tags -->    <title>Пекарня | Фронтенд-разработчик Анна Некрасова</title>    <meta name="title" content="Пекарня | Фронтенд-разработчик Анна Некрасова ">    <meta name="description" content="Разработка дизайн-концепта для пекарни">      <!-- Open Graph / Facebook -->    <meta property="og:type" content="website">    <meta property="og:url" content="https://annanekrasova.ru/">    <meta property="og:title" content="Пекарня | Фронтенд-разработчик Анна Некрасова ">    <meta property="og:description" content="Разработка дизайн-концепта для пекарни">    <meta property="og:image" content="img/an.jpg">      <!-- Twitter -->    <meta property="twitter:card" content="summary_large_image">    <meta property="twitter:url" content="https://annanekrasova.ru/">    <meta property="twitter:title" content="Пекарня | Фронтенд-разработчик Анна Некрасова ">    <meta property="twitter:description" content="Разработка дизайн-концепта для пекарни">    <meta property="twitter:image" content="img/an.jpg">      <link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-icon-57x57.png">    <link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-icon-60x60.png">    <link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-icon-72x72.png">    <link rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-icon-76x76.png">    <link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-icon-114x114.png">    <link rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-icon-120x120.png">    <link rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-icon-144x144.png">    <link rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-icon-152x152.png">    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-icon-180x180.png">    <link rel="icon" type="image/png" sizes="192x192"  href="img/fav/android-icon-192x192.png">    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">    <link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon-96x96.png">    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">    <link rel="stylesheet" href="css/style.min.css">  </head><body>  <canvas id="noise" class="noise"></canvas><header class="header">  <a href="/" class="header__logo">    <picture><source srcset="img/icons/logo.svg" type="image/webp"><img src="img/icons/logo.svg" alt="nekrasova-logo"></picture>  </a>  <div class="header__burger">    <span></span>  </div>  <nav class="header__menu">    <ul>      <li><a href="/portfolio.html" class="header__menu-item">портфолио</a></li>      <li><a href="/posters.html" class="header__menu-item">постеры</a></li>      <li><a href="/#about" class="header__menu-item">Обо мне</a></li>      <li><a href="/#contacts" class="header__menu-item">Контакты</a></li>    </ul>    <div class="header__menu-icons">      <div>Лайк, подписка, колокольчик)</div>      <a href="https://www.instagram.com/anna_webdev" target="_blank" class="header__link"><i class="fab fa-instagram"></i></a>      <a href="https://github.com/anchieff" target="_blank" class="header__link"><i class="fab fa-github"></i></a>      <a href="https://www.linkedin.com/in/anna-nekrasova-518b70200/" target="_blank" class="header__link"><i class="fab fa-linkedin"></i></a>    </div>  </nav></header>  <section class="bakery">    <div class="container">      <div class="bakery__title">        <h1 class="title title_fz85 title_left-circle">ПЕЧЕМ ПИРОГИ</h1>      </div>      <div class="bakery__content">        <div class="bakery__descr">          Разработала дизайн главной страницы для пекарни. Пожелания от заказчика — теплые цвета, уютная атмосфера, выпечка, как у бабушки.        </div>        <picture><source srcset="./img/portfolio/bakery.webp" type="image/webp"><img src="./img/portfolio/bakery.jpg" alt=""></picture>      </div>    </div>  </section>  <div class="overlay">  <div class="modal" id="request">    <div class="modal__close">      <svg class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">         <g stroke="none" stroke-width="1" fill="#B12B00" fill-rule="evenodd">        <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect>        <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect>         </g>       </svg>    </div>    <div class="modal__subtitle">Оставьте заявку на сайт</div>    <div class="modal__descr">Заполните форму, и я свяжусь с вами в ближайшее время</div>    <form class="feed__form" id="form" action="#">      <div class="form__item">        <label for="formName" class="form__label">Ваше имя*</label>        <input id="formName" name="name" type="text" class="form__input _req">        <div class="warn">Заполните обязательное поле</div>      </div>      <div class="form__item">        <label for="formEmail" class="form__label">Ваш email*</label>        <input id="formEmail" name="email" type="text" class="form__input _req _email">        <div class="warn">Заполните обязательное поле</div>      </div>      <div class="form__item">        <label for="formMessage" class="form__label">Расскажите о вашем проекте</label>        <textarea name="message" id="formMessage" class="form__input"></textarea>      </div>      <div class="form__item">        <div class="checkbox">          <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">          <label for="formAgreement" class="checkbox__label"><span>Я согласен(а) с <a href="/policy.html">Политикой конфиденциальности</a></span></label>          <div class="warn">Заполните обязательное поле</div>        </div>      </div>      <button type="submit" class="form__button">Отправить</button>    </form>  </div>   <div class="modal" id="thanks">    <div class="modal__close">      <svg class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">         <g stroke="none" stroke-width="1" fill="#B12B00" fill-rule="evenodd">        <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect>        <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="3" height="30"></rect>         </g>       </svg>    </div>    <div class="modal__subtitle">Спасибо за заявку!</div>    <div class="modal__descr">Я свяжусь с вами в ближайшее время)</div>  </div></div>  <div class="order-button">  <a href="#modal" class="order-button__link">    <picture><source srcset="img/icons/star-orange.svg" type="image/webp"><img class="order-button__star" src="img/icons/star-orange.svg" alt=""></picture>    <picture><source srcset="img/titles/order.svg" type="image/webp"><img class="order-button__content" src="img/titles/order.svg" alt=""></picture>  </a></div><footer class="footer">  <div class="footer__copyright">©Nekrasova 2020-2021</div>  <a href="/policy.html" class="footer__policy">Политика конфиденциальности</a></footer>   <script src="https://kit.fontawesome.com/ec5b7ba5be.js" crossorigin="anonymous"></script>  <script src="js/script.min.js"></script></body></html>

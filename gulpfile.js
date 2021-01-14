@@ -40,7 +40,10 @@ let { src, dest } = require('gulp'),
     uglify = require('gulp-uglify-es').default,
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
-    fonter =  require('gulp-fonter');
+    fonter =  require('gulp-fonter'),
+    imagemin = require('gulp-imagemin'),
+    webp = require('gulp-webp'),
+    webphtml = require('gulp-webp-html');
 
 
 
@@ -57,6 +60,7 @@ function browserSync() {
 function html() {
   return src(path.src.html)
     .pipe(fileinclude())
+    .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
 }
@@ -102,6 +106,21 @@ function js() {
 
 function images() {
 return src(path.src.img)
+    .pipe(
+      webp({
+        quality: 70
+      })
+    )
+    .pipe(dest(path.build.img))
+    .pipe(src(path.src.img))
+    .pipe(
+      imagemin({
+        progressive: true,
+        optimizationLevel: 3,
+        svgoPlugins: [{removeViewBox: false}],
+        interlaced: true
+      })
+    )
     .pipe(dest(path.build.img))
     .pipe(browsersync.stream())
 }
@@ -147,13 +166,12 @@ function fontsStyle(params) {
   function cb() { }
 
 
-
-  
-
 function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js], js);
+  gulp.watch([path.watch.img], images);
+  
 }
 
 function clean () {
